@@ -65,10 +65,16 @@ $superheroes = [
   ], 
 ];
 
+$q = filter_var($_GET['query'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+if($q == null) {
+    echo json_encode($superheroes);
+} else {
+    foreach($superheroes as $superhero) {
+        if(strtolower($superhero['name']) == strtolower($q) || strtolower($superhero['alias']) == strtolower($q)) {
+            echo json_encode($superhero);
+        } else {
+            echo null;
+        }
+    }
+}
 ?>
-
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>

@@ -6,12 +6,31 @@
     <title>Avengers Character Search</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Goldman:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <h1>Avengers Character Search</h1>
     </header>
-    <button type="submit" id="search">Search</button>
+
+    <main>
+        <section>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <input type="text" name="field" id="field" placeholder="enter a name">
+                </div>
+                <button type="submit" id="search">Search</button>
+            </form>
+        </section>
+
+        <section id="results">
+            <div>
+                <h1>RESULT</h1>
+            </div>
+            <hr>
+            <div id="result"></div>
+        </section>
+    </main>
 </body>
 </html>
