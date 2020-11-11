@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         resultSec.appendChild(descrip);
                     }
                 } else {
-                    alert(httpRequest.status);
+                    alert("There was a problem with the request.");
                 }
             }
         };
